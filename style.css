@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,700,900|Lato:300,400,700&display=swap');
+:root {
+    --primaryViolet: #5e42a6;
+    --navColor: #312450;
+    --firstBg: #5052b5;
+    --secondBg: #4c4eac;
+    --thirdBg: #484aa3;
+    --fourthBg: #b74e91;
+    --fifthBg: #5e42a6;
+    --footerBg: #493382;
+    --white: #fff;
+    --border: #765eb3;
+    --lightGray: rgba(211, 211, 211,.7);
+    --borderLightGray: rgba(211, 211, 211,.3);
+    --transition: 0.3s ease;
+    --lightPink: #ca7aab;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    display: flex;
+    position: relative;
+}
+h1,h2,h3, h4 {
+    font-family: 'Barlow', sans-serif;
+}
+button {
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    color: var(--white);
+    text-transform: uppercase;
+    background: transparent;
+    padding: 20px 40px;
+    margin-top: 30px;
+}
+button:hover {
+    background-color: var(--lightGray);
+    transition: var(--transition);
+}
+/********************
+    nav
+********************/
+nav {
+    position: fixed;
+    background-color: var(--navColor);
+    width: 25%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav .logo img{
+    max-width: 350px;
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 60px 40px 20px;
+    width: 100%;
+}
+nav ul li {
+    list-style: none;
+    border-bottom: 2px solid var(--border);
+    text-align: right;
+    margin-bottom: 40px;
+}
+nav ul li a {
+    color: var(--white);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+nav ul li a:hover {
+    color: var(--lightGray);
+    transition: var(--transition);
+}
+nav ul li:hover {
+    border-bottom: 2px solid var(--fourthBg);
+    transition: var(--transition);
+}
+nav .social {
+    margin-left: auto;
+    padding-right: 60px;
+}
+nav .social a {
+    margin-right: 15px;
+}
+nav .social a i {
+    color: var(--white);
+    font-size: 2rem;
+}
+nav .social a:hover i {
+    color: var(--fourthBg);
+    transition: var(--transition);
+}
+main {
+    position: absolute;
+    left: 25%;
+    width: 75%;
+}
+/********************
+    welcome
+********************/
+#welcome {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    background-image: linear-gradient(rgba(94, 66, 166, .9), rgba(94, 66, 166, .9)), url(./circle.png);
+    background-position: center;
+    background-size: cover;
+}
+#welcome hgroup {
+    margin-left:50px;
+}
+#welcome h1 {
+    font-size: 5rem;
+    color: var(--white);
+}
+#welcome h4,
+#welcome p {
+    color: var(--lightGray);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/********************
+    who we are
+********************/
+#whoWeAre article {
+    display: flex;
+}
+#whoWeAre article .img {
+    flex: 0 0 30%;
+}
+#whoWeAre article .img img {
+    width: 100%;
+    display:block;
+}
+#whoWeAre article .text {
+    flex: 0 0 70%;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 0 0 80px;
+}
+#whoWeAre article:nth-child(1) .text {
+    background-color: var(--firstBg);
+}
+#whoWeAre article:nth-child(2) .text {
+    background-color: var(--secondBg);
+}
+#whoWeAre article:nth-child(3) .text {
+    background-color: var(--thirdBg);
+}
+#whoWeAre article .text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+#whoWeAre article .text p {
+    color: var(--lightGray);
+    font-size: 1.1rem;;
+}
+/********************
+    what we do
+********************/
+#whatWeDo {
+    background-color: var(--fourthBg);
+    padding: 70px;
+    color: var(--white);
+}
+#whatWeDo button {
+    border: 1px solid var(--lightGray);
+} 
+#whatWeDo .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid var(--borderLightGray);
+    border-radius: 4px;
+    margin-top: 30px;
+}
+#whatWeDo .technologies .tech {
+    flex: 0 0 50%;
+    border: 1px solid var(--borderLightGray);
+    padding: 80px 30px;
+    background-color: var(--lightPink);
+    display: flex;
+}
+#whatWeDo .technologies .tech .icon {
+    background-color: var(--white);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    line-height: 70px;
+    text-align: center;
+    margin-right: 30px;
+}
+#whatWeDo .technologies .tech .icon i {
+    font-size: 35px;
+    color: var(--fourthBg);
+}
+#whatWeDo .technologies .tech .text {
+    flex: 2;
+}
+#whatWeDo .technologies .tech .text h2 {
+    margin-bottom: 20px;
+}
+#whatWeDo .technologies .tech .text p {
+    color: var(--lightGray);
+    font-size: 1.1rem;
+}
+/********************
+    get in touch
+********************/
+#getInTouch {
+    background-color: var(--fifthBg);
+    color: var(--white);
+    padding: 100px 50px;
+}
+#getInTouch h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+#getInTouch input::placeholder,
+#getInTouch textarea::placeholder {
+    color: black;
+margin-bottom: 20px;
+}
+#getInTouch p {
+    color: var(--lightGray);
+    font-size: 1.5rem;
+    }
+#getInTouch .form {
+    display: flex;
+    margin-top: 30px;
+}
+#getInTouch .form form {
+    flex: 0 0 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#getInTouch input,
+#getInTouch textarea {
+    background-color: var(--borderLightGray);
+    padding: 20px;
+    border-radius: 5px;
+}
+#getInTouch textarea {
+    flex: 0 0 96%;
+}
+#getInTouch input {
+    border: none;
+    flex: 0 0 47%;
+    margin: 0 20px 20px 0;
+}
+#getInTouch .form .info {
+    flex: 0 0 30%;
+    border-left: 1px solid var(--lightGray);
+    padding-left: 20px;
+}
+#getInTouch .form .info h4 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+#getInTouch .form .info p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+/********************
+    footer
+********************/
+footer {
+    background-color: var(--border);
+    padding: 40px 0;
+    text-align: center;
+    color: var(--lightGray);
+}
+footer p {
+font-size: 1.1rem;
+}
